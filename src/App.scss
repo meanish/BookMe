@@ -1,0 +1,224 @@
+@import url("https://fonts.googleapis.com/css2?family=Cinzel&family=Tapestry&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cinzel&family=Oleo+Script+Swash+Caps&family=Tapestry&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+$text: #eee;
+$theme: #003580;
+$highlight: rgb(181, 162, 53);
+body {
+  width: 100%;
+  a {
+    text-decoration: none;
+  }
+  .container {
+    max-width: 72%;
+  }
+  .row {
+    --bs-gutter-x: 0;
+  }
+}
+
+.highlight {
+  color: $highlight;
+  font-family: "Oleo Script Swash Caps", cursive;
+}
+
+//Home.js
+
+.home-page {
+  background-color: $theme;
+  padding-bottom: 4rem;
+
+  .head-top {
+    .title {
+      cursor: pointer;
+      font-size: 28px;
+      font-weight: 700;
+      font-family: "Tapestry", cursive;
+      padding: 0.5rem 0;
+      color: $text;
+      align-items: center;
+      display: flex;
+      height: 10vh;
+    }
+    .head-register {
+      justify-content: space-between;
+      align-items: center;
+      margin: 0.5rem;
+      display: flex;
+      a {
+        text-decoration: none;
+      }
+      a.active {
+        border: none;
+      }
+      button {
+        margin: 0.5rem;
+        margin-left: 0;
+        font-size: 10px;
+        border-radius: 0px;
+        background-color: $text;
+        &:hover {
+          color: $theme;
+        }
+      }
+    }
+  }
+  .choose-one {
+    margin: 0.5rem 0 2.5rem;
+    display: flex;
+    justify-content: flex-start;
+    .choose {
+      margin: 0rem 1rem 1rem 0;
+      button {
+        padding: 10px 8px;
+        border-radius: 2rem;
+        color: $text;
+        margin: 0.5rem 0;
+        font-weight: bold;
+        &:hover {
+          background-color: rgba(144, 162, 187, 0.1);
+        }
+        .icon-me {
+          margin-right: 10px;
+          color: $text;
+        }
+      }
+    }
+    #selected {
+      border: 2px solid $text;
+      background-color: rgba(203, 182, 249, 0.06);
+    }
+  }
+  .home-description {
+    color: $text;
+    h1 {
+      font-size: 50px;
+      font-weight: bold;
+    }
+    p {
+      margin-top: 0.5rem;
+      font-size: 23px;
+    }
+    button {
+      border: 2px solid $text;
+      margin: 1.5rem 0;
+      font-weight: bold;
+      padding: 1rem;
+      color: $theme;
+      border-radius: 10px;
+      background-color: $text;
+    }
+  }
+}
+
+//Date.js
+.date-to-go {
+  position: relative;
+  .floating-section {
+    position: absolute;
+    width: 100%;
+    top: -40px;
+  }
+  .tableinit {
+    display: flex;
+    justify-content: space-between;
+    width: 72%;
+    margin: auto;
+    gap: 5px;
+    background-color: $highlight;
+    border-radius: 4px;
+    color: rgb(63, 58, 58);
+    font-size: 15px;
+
+    .whatdoing {
+      font-size: 14px;
+      width: 100%;
+      margin: 5px 0;
+      background-color: $text;
+      justify-content: start;
+      cursor: pointer;
+      display: grid;
+      grid-template-columns: 1fr 5fr;
+      align-items: center;
+      text-align: start;
+      &:nth-child(1) {
+        margin-left: 5px;
+      }
+      p {
+        margin: 0;
+      }
+      .button {
+        margin-left: 5px;
+      }
+
+      // Map.js
+      p {
+        display: flex;
+        .inmap {
+          display: flex;
+          width: 100%;
+          justify-content: space-between;
+          gap: 10px;
+          .select-place {
+            outline: none;
+            text-align: center;
+            border: none;
+            min-width: 250px;
+            background: none;
+            font-size: 15px;
+          }
+          .cross {
+            font-size: 25px;
+          }
+        }
+      }
+    }
+
+    // Calender
+    .decide {
+      font-size: 14px;
+      width: 100%;
+      padding: 6px 0;
+    }
+    .calender {
+      position: absolute;
+      top: 50px;
+      z-index: 1;
+    }
+
+    //people.js
+    .number {
+      p {
+        padding: 0;
+        display: flex;
+      }
+      .incre {
+        font-weight: bold;
+        max-width: 30px;
+        min-height: 100%;
+        margin-left: 4px;
+        background-color: transparent;
+        border: none;
+        text-align: center;
+        border-radius: 2px;
+        &:hover {
+          color: blue;
+        }
+      }
+    }
+    .search {
+      background-color: $theme;
+      color: $text;
+      margin: 5px;
+      margin-left: 0;
+      padding: 1rem 2rem;
+      border: none;
+      &:hover {
+        background-color: #003580d4;
+      }
+    }
+  }
+}
