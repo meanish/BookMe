@@ -1,0 +1,72 @@
+.page-element {
+    display: flex;
+    justify-content: end;
+    gap: 7px;
+    align-items: center;
+}
+li {
+    list-style: none;
+}
+.page-num {
+    background-color: #003580;
+    border-radius: 5px;
+    color: #ffffff;
+}
+.page-num:hover {
+    color: white;
+    background-color: #003580ac;
+}
+.page-search {
+    display: flex;
+}
+.active {
+    color: #003580;
+}
+.page-num {
+    padding: 5px;
+}
+.page-num2:hover {
+    color: rgb(0, 0, 0);
+}
+
+/* //HotelCard/ */
+.HotelCard {
+    background-color: #003580;
+    color: white;
+    padding: 10px 0;
+}
+.head {
+    font-size: 22px;
+    text-align: center;
+}
+.items {
+}
+.hotel-name {
+    color: red;
+    text-decoration: underline;
+}
+.for-image {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+.butan {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 99;
+    padding: 2px 5px;
+    border-radius: 5px;
+    box-shadow: 2px 5px 10px rgb(0, 0, 0);
+    transition: all 0.2s;
+}
+.butan:hover {
+    color: #003580;
+    background-color: rgb(255, 255, 255);
+}
+
+.big-images {
+    width: 400px;
+    height: 300px;
+}

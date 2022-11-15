@@ -46,7 +46,6 @@ img {
         padding: 1rem;
     }
 }
-
 //Feature.js
 .country-card {
     padding: 4rem 0;
@@ -422,7 +421,7 @@ img {
                 &:active,
                 &:focus {
                     background: rgba(50, 123, 218, 0.06);
-                    
+
                     color: #1e557c;
                     box-shadow: 0.5px 0.5px 5px #3daeff;
                 }
@@ -435,7 +434,7 @@ img {
     .region,
     .interest {
         margin-top: 20px;
-        ul {
+        .Place {
             margin: 0;
             padding: 0;
             display: grid;
@@ -480,7 +479,7 @@ img {
     margin-top: 5rem;
     text-align: center;
     padding: 2rem 0;
-    .company-logo {
+    .footerContent {
         display: flex;
         justify-content: center;
         gap: 30px;

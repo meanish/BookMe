@@ -1,10 +1,11 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useContext } from 'react';
 import { useState } from 'react';
 import { DateRange } from 'react-date-range';
 import 'react-date-range/dist/styles.css'; // main css file
 import 'react-date-range/dist/theme/default.css'; // theme css file
 import { format } from "date-fns";
 import Button from '@mui/material/Button';
+import { AllVal } from "../../Context";
 
 const Calender = () => {
 
@@ -12,6 +13,8 @@ const Calender = () => {
     const [Calen, setCalen] = useState(true);
     const [tourOn, settourOn] = useState("");
     const [Done, setDone] = useState(true);
+
+    const { userData, setUserData } = useContext(AllVal)
 
 
     const [iDate, setiDate] = useState([
@@ -23,12 +26,15 @@ const Calender = () => {
     ]);
 
     const toDecide = () => {
-        if (noDate == "Date to visit") {
+        if (noDate === "Date to visit") {
             setDate("Fix Date");
             setCalen(false);
-        } else if (noDate == "Fix Date") {
+        } else if (noDate === "Fix Date") {
             setCalen(true);
-            setDate(`From: ${format(iDate[0].startDate, "yyyy/MM/dd")} to:${format(iDate[0].endDate, "yyyy/MM/dd")}`)
+            let entryDate = format(iDate[0].startDate, "yyyy-MM-dd")
+            let exitDate = format(iDate[0].endDate, "yyyy-MM-dd")
+            setDate(`From: ${entryDate} to: ${exitDate}`)
+            setUserData({ ...userData, visitDate: entryDate, returnDate: exitDate })
         } else {
             setCalen(false);
             setDate("Fix Date");

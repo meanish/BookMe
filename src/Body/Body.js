@@ -1,7 +1,7 @@
 import React from "react";
 import Feature from "./Feature";
-import "./styles/body.scss";
-import CardData from "./CardData";
+import ".././styles/body.scss";
+import CardData from "../CardData";
 import { Link } from "react-router-dom";
 import LightbulbIcon from "@mui/icons-material/Lightbulb";
 import Trip from "./Trip";
@@ -83,8 +83,8 @@ const Body = () => {
           <div className="heading">
             <div className="title">Homes guests love</div>
           </div>
-          {CardData.map((Val) => {
-            return <Slider Val={Val.Guest} show={4} showCard={"Hello"} />;
+          {CardData.map((Val, index) => {
+            return <Slider Val={Val.Guest} key={index} show={4} showCard={"Hello"} />;
           })}
         </div>
 
@@ -101,7 +101,7 @@ const Body = () => {
 
         <div className="subscribe">
           {CardData.map((Val, index) => {
-            return <RemoveCard AllData={Val.Remove} place={1} />;
+            return <RemoveCard AllData={Val.Remove} key={index} place={1} />;
           })}
         </div>
         <div className="destination-tabs">

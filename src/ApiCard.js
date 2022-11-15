@@ -6,7 +6,7 @@ const ApiCard = (props) => {
   console.log(Hints);
   return (
     <>
-      <p>Dtta found</p>
+      <p>Dtasta found</p>
     </>
   );
 };

@@ -1,8 +1,8 @@
 
 import React, { useRef } from "react";
 import Slider from "react-slick";
-import "../node_modules/slick-carousel/slick/slick.css";
-import "../node_modules/slick-carousel/slick/slick-theme.css";
+import "../../node_modules/slick-carousel/slick/slick.css";
+import "../../node_modules/slick-carousel/slick/slick-theme.css";
 // import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
     import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
     import ChevronRightIcon from '@mui/icons-material/ChevronRight';
@@ -12,7 +12,6 @@ import Guest from "./Guest";
 
 
 const CustomArrows = ({ Val, show, showCard }) => {
-    console.log(show)
     const slideshow = show;
     const sliderRef = useRef(null);
 

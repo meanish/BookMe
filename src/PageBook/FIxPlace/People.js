@@ -1,16 +1,18 @@
-import { RecordVoiceOverTwoTone } from '@material-ui/icons';
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
+import { AllVal } from "../../Context";
 
 const People = () => {
+    const { userData, setUserData } = useContext(AllVal)
+
     const [total, setTotal] = useState({
-        "adult": "1",
-        "children": "0",
+        "adult": "2",
+        "children": "2",
         "room": "1",
     })
-    console.log(`${total.adult}`)
 
     const Record = (events) => {
         const { name, value } = events.target;
+        setUserData({ ...userData, [name]: value })
         setTotal((preVal) => {
             return {
                 ...preVal,

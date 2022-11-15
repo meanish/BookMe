@@ -15,7 +15,7 @@ const Footer = () => {
             const FooterLogo = Val.Footerlogo;
 
             return (
-              <>
+              <div className="footerContent" key={index}>
                 {FooterLogo.map((Alllogo, index) => {
                   const { img } = Alllogo;
                   return (
@@ -24,7 +24,7 @@ const Footer = () => {
                     </div>
                   );
                 })}
-              </>
+              </div>
             );
           })}
         </div>
